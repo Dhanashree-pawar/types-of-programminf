@@ -1,0 +1,13 @@
+//monolithic programming
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int len=10,bdt=20;
+  cout<<"area is "<<len*bdt<<"  perimeter is "<<2*(len+bdt);
+ 
+ 
+  return 0;
+}
