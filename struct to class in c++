@@ -1,0 +1,32 @@
+//using class in c++
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+class rect{
+private:
+    int len;
+    int bdt;
+public:
+void initialize(int l, int b){// ehre we have passe dby add coz we want the actual para to change
+   len=l;// no r.len as it is directly accessible
+   bdt = b;
+}
+
+int area(){
+    return len*bdt;
+}
+int perimeter(){
+    return 2*(len+bdt); // here no -> coz pass by value
+}
+};
+int main()
+{
+  rect r1;// good habit of iniitalizing always
+  int len,bdt;
+  cin>>len>>bdt;
+  r1.initialize(len,bdt);
+ cout<<r1.area()<<endl;
+ cout<<r1.perimeter();
+  
+  return 0;
+}
