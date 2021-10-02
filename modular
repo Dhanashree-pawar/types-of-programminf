@@ -1,0 +1,19 @@
+//modualr programming
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+int area(int num1, int num2){
+    return num1*num2;
+}
+int perimeter(int num1,int num2){
+    return 2*(num1+num2);
+}
+int main()
+{
+  int len=0,bdt=0;
+  cin>>len>>bdt;
+  cout<<"area is "<<area(len, bdt);
+  cout<<"peri is "<<perimeter(len, bdt);
+  
+  return 0;
+}
