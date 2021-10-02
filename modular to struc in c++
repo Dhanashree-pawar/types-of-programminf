@@ -1,0 +1,30 @@
+//using structure in c
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+struct rect{
+    int len;
+    int bdt;
+};
+void initialize(struct rect *r, int l, int b){// ehre we have passe dby add coz we want the actual para to change
+    r->len=l;// only here, ie whule innitlazing we pass by add coz w ewant to initalzie, ie change the value
+    r->bdt = b;
+}
+
+int area(struct rect r){
+    return r.len*r.bdt;
+}
+int perimeter(struct rect r){
+    return 2*(r.len+r.bdt); // here no -> coz pass by value
+}
+int main()
+{
+  struct rect r1;// good habit of iniitalizing always
+  int len,bdt;
+  cin>>len>>bdt;
+  initialize(&r1, len,bdt);
+ cout<<area(r1)<<endl;
+ cout<<perimeter(r1);
+  
+  return 0;
+}
